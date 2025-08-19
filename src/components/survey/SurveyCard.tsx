@@ -2,8 +2,7 @@
 
 import React from "react";
 import { Badge } from "@/ui/components/Badge";
-import { Button } from "@/ui/components/Button";
-import { FeatherArrowUp, FeatherTrendingUp } from "@subframe/core";
+import { FeatherArrowUp } from "@subframe/core";
 
 interface SurveyCardProps {
   title: string;

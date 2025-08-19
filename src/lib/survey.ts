@@ -92,8 +92,8 @@ export const generateSampleMetrics = (
 };
 
 export const generateSampleChartData = (
-  metricType: MetricType,
-  timeRange: TimeRange
+  _metricType: MetricType,
+  _timeRange: TimeRange
 ): ChartData => {
   const baseData = [
     { Year: "2015", Psychology: 120, Business: 110, Biology: 100 },

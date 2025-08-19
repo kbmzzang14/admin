@@ -8,14 +8,10 @@
  */
 
 import React from "react";
-import { FeatherHome } from "@subframe/core";
-import { FeatherInbox } from "@subframe/core";
-import { FeatherBarChart2 } from "@subframe/core";
 import { FeatherBell } from "@subframe/core";
 import { FeatherSettings } from "@subframe/core";
 import { FeatherUser } from "@subframe/core";
 import { FeatherLogOut } from "@subframe/core";
-import { FeatherClipboard } from "@subframe/core";
 import * as SubframeCore from "@subframe/core";
 import { Avatar } from "../components/Avatar";
 import { DropdownMenu } from "../components/DropdownMenu";

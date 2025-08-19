@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { Avatar } from "@/ui/components/Avatar";
 import { Badge } from "@/ui/components/Badge";
 import { Button } from "@/ui/components/Button";
 import { DropdownMenu } from "@/ui/components/DropdownMenu";
@@ -81,20 +80,20 @@ export default function Main() {
               <TextField.Input
                 placeholder="Search workflows..."
                 value=""
-                onChange={(event: React.ChangeEvent<HTMLInputElement>) => {}}
+                onChange={(_: React.ChangeEvent<HTMLInputElement>) => {}}
               />
             </TextField>
             <Button
               variant="neutral-tertiary"
               iconRight={<FeatherChevronDown />}
-              onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+              onClick={() => {}}
             >
               Last 7 days
             </Button>
             <Button
               variant="neutral-tertiary"
               icon={<FeatherFilter />}
-              onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+              onClick={() => {}}
             >
               Filter
             </Button>
@@ -155,26 +154,24 @@ export default function Main() {
                   <IconButton
                     variant="neutral-tertiary"
                     icon={<FeatherPause />}
-                    onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                    onClick={() => {}}
                   />
                   <IconButton
                     variant="neutral-tertiary"
                     icon={<FeatherEdit2 />}
-                    onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                    onClick={() => {}}
                   />
                   <IconButton
                     variant="neutral-tertiary"
                     icon={<FeatherTrash />}
-                    onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                    onClick={() => {}}
                   />
                   <SubframeCore.DropdownMenu.Root>
                     <SubframeCore.DropdownMenu.Trigger asChild={true}>
                       <IconButton
                         variant="neutral-tertiary"
                         icon={<FeatherMoreHorizontal />}
-                        onClick={(
-                          event: React.MouseEvent<HTMLButtonElement>
-                        ) => {}}
+                        onClick={() => {}}
                       />
                     </SubframeCore.DropdownMenu.Trigger>
                     <SubframeCore.DropdownMenu.Portal>
@@ -240,26 +237,24 @@ export default function Main() {
                   <IconButton
                     variant="neutral-tertiary"
                     icon={<FeatherPlay />}
-                    onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                    onClick={() => {}}
                   />
                   <IconButton
                     variant="neutral-tertiary"
                     icon={<FeatherEdit2 />}
-                    onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                    onClick={() => {}}
                   />
                   <IconButton
                     variant="neutral-tertiary"
                     icon={<FeatherTrash />}
-                    onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                    onClick={() => {}}
                   />
                   <SubframeCore.DropdownMenu.Root>
                     <SubframeCore.DropdownMenu.Trigger asChild={true}>
                       <IconButton
                         variant="neutral-tertiary"
                         icon={<FeatherMoreHorizontal />}
-                        onClick={(
-                          event: React.MouseEvent<HTMLButtonElement>
-                        ) => {}}
+                        onClick={() => {}}
                       />
                     </SubframeCore.DropdownMenu.Trigger>
                     <SubframeCore.DropdownMenu.Portal>

@@ -131,7 +131,7 @@ export default function SurveyDashboard() {
               <Button
                 variant="neutral-secondary"
                 icon={<FeatherDownload />}
-                onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                onClick={() => {}}
               >
                 Export
               </Button>
@@ -174,7 +174,7 @@ export default function SurveyDashboard() {
             </span>
             <Button
               variant="neutral-secondary"
-              onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+              onClick={() => {}}
             >
               View all
             </Button>
@@ -218,7 +218,7 @@ export default function SurveyDashboard() {
                 <div className="flex grow shrink-0 basis-0 items-center justify-end">
                   <IconButton
                     icon={<FeatherMoreHorizontal />}
-                    onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                    onClick={() => {}}
                   />
                 </div>
               </Table.Cell>
@@ -251,7 +251,7 @@ export default function SurveyDashboard() {
                 <div className="flex grow shrink-0 basis-0 items-center justify-end">
                   <IconButton
                     icon={<FeatherMoreHorizontal />}
-                    onClick={(event: React.MouseEvent<HTMLButtonElement>) => {}}
+                    onClick={() => {}}
                   />
                 </div>
               </Table.Cell>
