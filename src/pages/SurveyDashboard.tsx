@@ -172,10 +172,7 @@ export default function SurveyDashboard() {
             <span className="text-heading-3 font-heading-3 text-default-font">
               Recent Responses
             </span>
-            <Button
-              variant="neutral-secondary"
-              onClick={() => {}}
-            >
+            <Button variant="neutral-secondary" onClick={() => {}}>
               View all
             </Button>
           </div>
