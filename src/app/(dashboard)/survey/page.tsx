@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
+
+export const dynamic = "force-dynamic";
 import { DefaultPageLayout } from "@/ui/layouts/DefaultPageLayout";
 import { ToggleGroup } from "@/ui/components/ToggleGroup";
 import { Badge } from "@/ui/components/Badge";

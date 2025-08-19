@@ -1,6 +1,8 @@
 "use client";
 
 import React from "react";
+
+export const dynamic = "force-dynamic";
 import { Badge } from "@/ui/components/Badge";
 import { Button } from "@/ui/components/Button";
 import { DropdownMenu } from "@/ui/components/DropdownMenu";

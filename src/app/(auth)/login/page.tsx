@@ -1,40 +1,33 @@
 "use client";
 
 import React, { useState } from "react";
+
+export const dynamic = "force-dynamic";
 import { Button } from "@/ui/components/Button";
 import { LinkButton } from "@/ui/components/LinkButton";
 import { TextField } from "@/ui/components/TextField";
 import { useAuth } from "@/contexts/AuthContext";
 import { useRouter } from "next/navigation";
 
-function SignUp() {
+function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [message, setMessage] = useState("");
-  const { signUp } = useAuth();
+  const { signIn } = useAuth();
   const router = useRouter();
 
-  const handleSignUp = async (e: React.FormEvent) => {
+  const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError("");
-    setMessage("");
 
-    if (password !== confirmPassword) {
-      setError("Passwords do not match");
-      setLoading(false);
-      return;
-    }
-
-    const { error } = await signUp(email, password);
+    const { error } = await signIn(email, password);
 
     if (error) {
       setError(error.message);
     } else {
-      setMessage("Check your email for the confirmation link!");
+      router.push("/dashboard");
     }
 
     setLoading(false);
@@ -57,7 +50,7 @@ function SignUp() {
           alt="Logo"
         />
         <form
-          onSubmit={handleSignUp}
+          onSubmit={handleSignIn}
           className="flex w-full flex-col items-start gap-6"
         >
           {error && (
@@ -65,14 +58,9 @@ function SignUp() {
               {error}
             </div>
           )}
-          {message && (
-            <div className="w-full p-3 text-sm text-green-600 bg-green-50 border border-green-200 rounded-md">
-              {message}
-            </div>
-          )}
           <TextField
             className="h-auto w-full flex-none"
-            label="이메일"
+            label="아이디"
             helpText=""
           >
             <TextField.Input
@@ -100,21 +88,6 @@ function SignUp() {
               required
             />
           </TextField>
-          <TextField
-            className="h-auto w-full flex-none"
-            label="비밀번호 확인"
-            helpText=""
-          >
-            <TextField.Input
-              type="password"
-              placeholder="Confirm your password..."
-              value={confirmPassword}
-              onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-                setConfirmPassword(event.target.value)
-              }
-              required
-            />
-          </TextField>
           <div className="flex w-full flex-col items-start gap-4">
             <Button
               className="h-10 w-full flex-none"
@@ -122,16 +95,16 @@ function SignUp() {
               type="submit"
               loading={loading}
             >
-              {loading ? "Creating account..." : "Create account"}
+              {loading ? "로그인 처리중 ..." : "로그인"}
             </Button>
-            <div className="flex w-full items-center justify-center">
+            <div className="flex w-full items-center justify-between">
               <LinkButton
                 onClick={(event: React.MouseEvent<HTMLButtonElement>) => {
                   event.preventDefault();
-                  router.push("/login");
+                  router.push("/signup");
                 }}
               >
-                Already have an account? Sign in
+                회원가입(supabase)
               </LinkButton>
             </div>
           </div>
@@ -235,4 +208,4 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default Login;
